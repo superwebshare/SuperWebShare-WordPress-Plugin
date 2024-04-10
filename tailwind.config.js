@@ -1,4 +1,5 @@
 module.exports = {
+  prefix: "_",
   content: ["./admin/**/*.{php,js}"],
   theme: {
     extend: {

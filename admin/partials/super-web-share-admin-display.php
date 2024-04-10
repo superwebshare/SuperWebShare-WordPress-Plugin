@@ -321,11 +321,11 @@ function superwebshare_fallback_text_color_cb() {
  */
 function superwebshare_fallback_show_fallback_cb() {
 	$settings_fallback = superwebshare_get_settings_fallback();
-	$saved             = isset( $settings_fallback['fallback_show_in_desktop'] ) ? esc_html( $settings_fallback['fallback_show_in_desktop'] ) : 'disable';
-	superwebshare_input_toggle( 'superwebshare_fallback_settings[fallback_show_in_desktop]', 'enable', $saved );
+	$saved             = isset( $settings_fallback['superwebshare_fallback_show_fallback_on_desktop'] ) ? esc_html( $settings_fallback['superwebshare_fallback_show_fallback_on_desktop'] ) : 'disable';
+	superwebshare_input_toggle( 'superwebshare_fallback_settings[superwebshare_fallback_show_fallback_on_desktop]', 'enable', $saved );
 	?>
 		<p class="description">
-			<?php esc_html_e( 'This setting does not apply to Microsoft Edge Browser, as the specific browser is now showing a dialog box somewhat similiar to our fallback', 'super-web-share' ); ?>
+			<?php esc_html_e( 'This setting does not apply to Microsoft Edge Browser, as the specific browser is now showing a dialog box somewhat similar to our fallback', 'super-web-share' ); ?>
 		</p>
 	<?php
 }
@@ -371,7 +371,7 @@ function superwebshare_fallback_social_networks_cb() {
 	$settings_appearance = superwebshare_get_settings_fallback();
 	?>
 		<div class="sws-social-networks-container">
-			<div class="sws-social-networks-wrap hidden" >
+			<div class="sws-social-networks-wrap _hidden" >
 				<div class="sws-social-networks " >
 					<?php
 					foreach ( $networks as $key => $network ) :
@@ -379,7 +379,7 @@ function superwebshare_fallback_social_networks_cb() {
 						$check_box_attributes = array(
 							'checked'    => in_array( $key, $settings_appearance['fallback_social_networks'] ) ? 'checked' : '',
 							'type'       => 'checkbox',
-							'class'      => '!hidden input-network',
+							'class'      => '!_hidden input-network',
 							'name'       => 'network[]',
 							'data-name'  => $network['name'],
 							'data-icon'  => $icons->get_icon( $network['icon'] ),
@@ -391,7 +391,7 @@ function superwebshare_fallback_social_networks_cb() {
 						?>
 						<label class="sws-social-network sws-icon-<?php echo esc_html( $key ); ?>" style="background-color:<?php echo esc_html( $network['color'] ); ?>">
 							
-							<div class="flex items-center">
+							<div class="_flex _items-center">
 								<span class="sws-icon-wrap">
 									<?php echo $icons->get_icon( $network['icon'] );  // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> 
 								</span>
@@ -400,15 +400,15 @@ function superwebshare_fallback_social_networks_cb() {
 								</span>
 							</div>
 							<input <?php echo array_to_attributes( $check_box_attributes ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> >
-							<span class="dashicons-yes-alt dashicons-before hidden"></span>
+							<span class="dashicons-yes-alt dashicons-before _hidden"></span>
 						</label>
 					<?php endforeach; ?>
 				</div>
 			</div>
-			<div class="text-end mb-4">
+			<div class="_text-end _mb-4">
 				<a href="#" class="button button-primary social-networks-choose-toggle" data-close-text="<?php esc_html_e( 'Apply Selection', 'super-web-share' ); ?>"><?php esc_html_e( 'Add Networks', 'super-web-share' ); ?></a>
 			</div>
-			<div class="sws-selected-social-networks relative ">
+			<div class="sws-selected-social-networks _relative ">
 				<!-- Drag icons -->
 			</div>
 		</div>

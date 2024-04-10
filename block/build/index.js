@@ -291,11 +291,11 @@ function InputStyle({
   const options = _block_json__WEBPACK_IMPORTED_MODULE_2__?.attributes?.style?.enum.map(v => {
     return {
       key: v,
-      name: v.toUpperCase()
+      name: v
     };
   });
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "components-base-control"
+    className: "components-base-control sws-component-style"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.CustomSelectControl, {
     __nextUnconstrainedWidth: true,
     label: "Button Style",

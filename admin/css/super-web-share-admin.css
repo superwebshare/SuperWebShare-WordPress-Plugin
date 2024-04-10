@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .sws-network-on-dragging{
-  @apply !overflow-hidden
+  @apply !_overflow-hidden
 }
 
 @layer components{
@@ -116,63 +116,63 @@
 
   .sws-social-networks .sws-icon-wrap{
     
-    @apply  w-8 px-2 py-1 box-border
+    @apply  _w-8 _px-2 _py-1 _box-border
   }
   .sws-social-networks .sws-icon-wrap svg{
-    @apply w-full
+    @apply _w-full
   }
   
   .sws-social-networks-container {
-    @apply max-w-xl bg-white p-4
+    @apply _max-w-xl _bg-white _p-4
   }
   
   .sws-social-networks {
-   @apply w-full grid grid-cols-1 xs:grid-cols-2  gap-x-3
+   @apply _w-full _grid _grid-cols-1 xs:_grid-cols-2  _gap-x-3
 
   }
   
   .sws-social-network {
   
-    @apply flex w-full sm:w-40 bg-gray-900 text-white p-1 items-center mb-4 justify-between
+    @apply _flex _w-full sm:_w-40 _bg-gray-900 _text-white _p-1 _items-center _mb-4 _justify-between
   }
   .sws-social-network .input-network:checked+.dashicons-before{
     display: block;
   }
   .sws-selected-social-network:not(.sws-network-on-drag){
-    @apply transition-all
+    @apply _transition-all
   }
   .sws-network-on-drag{
-    @apply opacity-50
+    @apply _opacity-50
   }
   .sws-selected-social-networks.on-dragging .sws-social-network-wrap{
-    @apply pointer-events-none transition-all
+    @apply _pointer-events-none _transition-all
   }
   .element-on-dragging{
     transform: none !important;
   }
   .sws-selected-social-network .sws-social-network-wrap{
-    @apply flex py-2 px-1 border-gray-100 border-0 border-b border-solid justify-between bg-white select-none
+    @apply _flex _py-2 _px-1 _border-gray-100 _border-0 _border-b _border-solid _justify-between _bg-white _select-none
   }
   .sws-selected-social-network .sws-icon-wrap{
-    @apply w-8 h-8 p-2 box-border text-white me-3
+    @apply _w-8 _h-8 _p-2 _box-border _text-white _me-3
   }
   .sws-selected-social-network .sws-icon-wrap svg{
-    @apply w-full
+    @apply _w-full
   }
   .sws-selected-social-network .sws-network-handle{
-    @apply cursor-move transition-colors text-gray-300 hover:text-gray-700 
+    @apply _cursor-move _transition-colors _text-gray-300 hover:_text-gray-700 
   }
   .sws-social-network-actions{
-    @apply flex items-center text-gray-500
+    @apply _flex _items-center _text-gray-500
   }
   .sws-social-network-actions a{
-    @apply no-underline text-inherit
+    @apply _no-underline _text-inherit
   }
   .sws-social-network-actions a .dashicons-before{
     vertical-align: bottom;
   }
   .sws-social-network-actions .sws-action-delete{
-    @apply hover:text-red-500 
+    @apply hover:_text-red-500 
   }
   
   

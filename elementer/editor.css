@@ -1,0 +1,32 @@
+.sws-widget-icon::before{
+    width: 32px;
+    height: 32px;
+    font-size: 32px;
+}
+.elementor-navigator__element .sws-widget-icon::before{
+    width: 32px;
+    height: 18px;
+    font-size: 18px;
+}
+.elementor-control-type-SWS-controller-icons{
+    background-color: black;
+    color: white;
+    
+}
+.elementor-control-field.sws-elementor-icon-field{
+    display: block;
+    padding: 12px 0;
+}
+.sws-elementor-icon-field .icon-select{
+    display: inline-block;
+    width: 30px;
+}
+.sws-elementor-icon-field  .elementor-control-input-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.elementor-control-type-SWS-controller-icons .elementor-control-title{
+    display: inline-block;
+    margin-bottom: 12px;
+}

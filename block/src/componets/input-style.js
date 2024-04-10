@@ -8,12 +8,12 @@ export default function InputStyle({ attributes, setAttributes }) {
 	const options = metadata?.attributes?.style?.enum.map(v => {
 		return {
 			key: v,
-			name: v.toUpperCase(),
+			name: v,
 		};
 	});
 
 	return (
-		<div className="components-base-control">
+		<div className="components-base-control sws-component-style">
 			<CustomSelectControl
 				__nextUnconstrainedWidth
 				label="Button Style"

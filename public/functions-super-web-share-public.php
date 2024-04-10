@@ -477,6 +477,16 @@ function superwebshare_is_amp() {
 }
 
 /**
+ * Check whether the any AMP plugins available.
+ *
+ * @since    2.4
+ * @return boolean
+ */
+function sws_is_amp_available() {
+	return function_exists( 'is_amp_endpoint' ) || function_exists( 'ampforwp_is_amp_endpoint' );
+}
+
+/**
  * Checking to display the button.
  *
  * @since 2.1

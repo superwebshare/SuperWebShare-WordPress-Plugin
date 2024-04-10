@@ -103,6 +103,12 @@ function superwebshare_activate_plugin( $network_wide = false ) {
 register_activation_hook( __FILE__, 'superwebshare_activate_plugin' );
 
 /**
+ * Adding the elementer file
+ */
+require_once plugin_dir_path( __FILE__ ) . 'elementer/elementer.php';
+
+
+/**
  * Begins execution of the plugin.
  *
  * Since everything within the plugin is registered via hooks,

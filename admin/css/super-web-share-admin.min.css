@@ -242,61 +242,41 @@
   color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 
-.fixed {
-  position: fixed;
-}
-
-.absolute {
-  position: absolute;
-}
-
-.relative {
+._relative {
   position: relative;
 }
 
-.mb-4 {
+._mb-4 {
   margin-bottom: 1rem;
 }
 
-.inline {
-  display: inline;
-}
-
-.flex {
+._flex {
   display: flex;
 }
 
-.\!hidden {
-  display: none !important;
-}
-
-.hidden {
+._hidden {
   display: none;
 }
 
-.h-full {
+.\!_hidden {
+  display: none !important;
+}
+
+._h-full {
   height: 100%;
 }
 
-.transform {
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.items-center {
+._items-center {
   align-items: center;
 }
 
-.px-3 {
+._px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
 }
 
-.text-end {
+._text-end {
   text-align: end;
-}
-
-.filter {
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .sws-network-on-dragging {

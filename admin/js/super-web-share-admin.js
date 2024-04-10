@@ -96,10 +96,10 @@ jQuery(document).ready(function ($) {
       const html = `
             <div class="sws-selected-social-network sws-selected-icon-${network.key}" draggable="false" data-key="${network.key}">
 							<div class="sws-social-network-wrap">
-								<div class="flex items-center">
-									<div class="sws-network-handle px-3 h-full flex items-center" >
+								<div class="_flex _items-center">
+									<div class="sws-network-handle _px-3 _h-full _flex _items-center" >
 										<span class="dashicons-menu dashicons-before "></span>
-										<input type="hidden" class="!hidden input-network" name="superwebshare_fallback_settings[fallback_social_networks][]" value="${network.key}">
+										<input type="hidden" class="!_hidden input-network" name="superwebshare_fallback_settings[fallback_social_networks][]" value="${network.key}">
 									</div>
 									<span class="sws-icon-wrap"  style="background-color:${network.color}">
                   ${network.icon}

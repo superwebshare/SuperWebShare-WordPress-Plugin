@@ -49,7 +49,7 @@ class Super_Web_Share_Public {
 
 		add_action( 'wp_footer', array( $this, 'add_modal_if_class_name_found' ) );
 
-		if ( function_exists( 'is_amp_endpoint' ) || function_exists( 'ampforwp_is_amp_endpoint' ) ) {
+		if ( sws_is_amp_available() ) {
 
 			add_action( 'the_content', 'superwebshare_inline_amp_button_code' );
 			add_action( 'amp_post_template_footer', 'superwebshare_amp_floating_button_code' );

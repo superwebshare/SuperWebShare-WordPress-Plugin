@@ -13,10 +13,28 @@ var DOMReady = function (callback) {
   }
 };
 
+const showFallbackOnDesktop = () => {
+  // This settings not applicable for MS Edge browser.
+  if (window.superWebShareFallback.superwebshare_fallback_show_fallback_on_desktop === "enable") {
+    let isIEedge = window.navigator.userAgent.indexOf("Edg") > -1;
+    let regexp = /android|iphone|kindle|ipad|webos|ipod/i;
+    let isDesktop = !regexp.test(window.navigator.userAgent);
+    return isDesktop && !isIEedge;
+  } else {
+    return false;
+  }
+};
+
 DOMReady(function () {
   setTimeout(hasPermission, 200);
   if (window.location.protocol != "https:") {
     if (document.querySelector(".sws-copy")) document.querySelector(".sws-copy").style.display = "none";
+  }
+  if (showFallbackOnDesktop()) {
+    let buttons = document.querySelectorAll(".superwebshare_prompt");
+    if (buttons.length > 0) {
+      buttons.forEach((m) => (m.style.display = "none"));
+    }
   }
 });
 
@@ -40,25 +58,16 @@ function hasPermission() {
     console.log("SuperWebShare: Your browser does not seems to support SuperWebShare, as the browser is incompatible");
   }
 }
-const fallbackForcefullyShowDesktop = () => {
-  // This settings not applicable for MS Edge browser.
-  if (window.superWebShareFallback.fallback_show_in_desktop === "enable") {
-    let isIEedge = window.navigator.userAgent.indexOf("Edg") > -1;
-    let regexp = /android|iphone|kindle|ipad|webos|ipod/i;
-    let isDesktop = !regexp.test(window.navigator.userAgent);
-    return isDesktop && !isIEedge;
-  } else {
-    return false;
-  }
-};
+
 async function SuperWebSharefn(title, url, description) {
-  if (typeof navigator.share === "undefined" || !navigator.share || fallbackForcefullyShowDesktop()) {
+  if (typeof navigator.share === "undefined" || !navigator.share) {
     window.superWebShareData = { title, url, description };
-    modal();
+    swsModal();
   } else if (window.location.protocol != "https:") {
     console.log(
       "SuperWebShare: Seems like the website is not served fully via https://. As for supporting SuperWebShare the website should be served fully via https://"
     );
+    swsModal();
   } else {
     try {
       await navigator.share({ title, text: description, url });
@@ -106,7 +115,7 @@ document.addEventListener("click", function (SuperWebShare) {
 
     SuperWebSharefn(shareTitle || meta_title, shareLink || meta_url, shareDescription || meta_desc);
   } else if (target.classList.contains("sws-modal-bg")) {
-    modal("hide");
+    swsModal("hide");
   }
 });
 
@@ -132,7 +141,7 @@ DOMReady(function () {
   if (btnModalClose) {
     btnModalClose.addEventListener("click", function (e) {
       e.preventDefault();
-      modal("hide");
+      swsModal("hide");
       return false;
     });
   }
@@ -153,7 +162,7 @@ DOMReady(function () {
     });
   });
 });
-const modal = (action = "show") => {
+const swsModal = (action = "show") => {
   let modal = document.querySelector(".sws-modal-bg");
   if (!modal) return;
   if (action == "hide") {
