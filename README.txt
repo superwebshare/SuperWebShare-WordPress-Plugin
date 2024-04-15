@@ -4,7 +4,7 @@ Donate link: https://superwebshare.com/donate
 Tags: share button, web share, native share, Share API, share, social share
 Requires at least: 3.0.1
 Tested up to: 6.4
-Stable tag: 2.4.2
+Stable tag: 2.4.3
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -106,6 +106,28 @@ Yes, from v2.3 we do support shortcodes to add floating and inline button like a
 6. Fallback on the desktop with social media platforms like WhatsApp, Twitter, Facebook and LinkedIn.
 
 == Changelog ==
+
+= 2.5 =
+Release Date: April 20th, 2024
+Our first block is here! And within this release we added more options to control the plugin features like fallback icons, order and more.. [Read our release post](https://superwebshare.com/v2-4-performance-improvements/)
+
+New Features:
+* Compatible with WordPress 6.5
+* Added option to select the fallback social icons to be shown
+* Added fallback icons like Mastodon, Telegram, Pinterest, and Email
+* Added option to change the order of fallback social icons
+* Added Gutenberg block for floating button
+* Added Elementor widget for floating button
+* Option to add a custom URL, title, and description for shortcodes
+
+Enhancement
+*  Add "noopener" to the fallback social links
+* String "Link copied!" can now be translated
+* AMP settings will now only show when the supported AMP plugins are installed on the website
+
+Bugfix:
+*  Fixed the settings changing to 'disable' for posts when the post status is changed using the Overview
+
 
 = 2.4 =
 Release Date: February 12th, 2023
