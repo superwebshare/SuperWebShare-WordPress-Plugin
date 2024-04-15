@@ -567,15 +567,6 @@ function superwebshare_register_settings_fallback() {
 		'superwebshare_fallback_settings_section'                               // Page slug.
 	);
 
-	// Fall-back social media icons.
-	add_settings_field(
-		'fallback_social_networks',                               // ID.
-		__( 'Choose Social Platforms', 'super-web-share' ),                     // Title.
-		'superwebshare_fallback_social_networks_cb',                            // CB.
-		'superwebshare_fallback_settings_section',                              // Page slug.
-		'superwebshare_fallback_settings_section'                               // Settings Section ID.
-	);
-
 	// Description.
 	add_settings_field(
 		'superwebshare_inline_description_share',                               // ID.
@@ -594,11 +585,11 @@ function superwebshare_register_settings_fallback() {
 		'superwebshare_fallback_settings_section'                               // Settings Section ID.
 	);
 
-	// Option to change the fallback popup title - Since 2.4.
+	// Since 2.1 for layout selection for fallback.
 	add_settings_field(
-		'superwebshare_fallback_title',                                         // ID.
-		__( 'Title for fallback modal', 'super-web-share' ),                    // Title.
-		'superwebshare_fallback_title_cb',                                      // CB.
+		'superwebshare_fallback_modal_layout',                                  // ID.
+		__( 'Fallback layout', 'super-web-share' ),                             // Title.
+		'superwebshare_fallback_modal_layout_cb',                               // CB.
 		'superwebshare_fallback_settings_section',                              // Page slug.
 		'superwebshare_fallback_settings_section'                               // Settings Section ID.
 	);
@@ -612,11 +603,11 @@ function superwebshare_register_settings_fallback() {
 		'superwebshare_fallback_settings_section'                               // Settings Section ID.
 	);
 
-	// Since 2.1 for layout selection for fallback.
+	// Option to change the fallback popup title - Since 2.4.
 	add_settings_field(
-		'superwebshare_fallback_modal_layout',                                  // ID.
-		__( 'Fallback layout', 'super-web-share' ),                             // Title.
-		'superwebshare_fallback_modal_layout_cb',                               // CB.
+		'superwebshare_fallback_title',                                         // ID.
+		__( 'Title for fallback modal', 'super-web-share' ),                    // Title.
+		'superwebshare_fallback_title_cb',                                      // CB.
 		'superwebshare_fallback_settings_section',                              // Page slug.
 		'superwebshare_fallback_settings_section'                               // Settings Section ID.
 	);
@@ -626,6 +617,15 @@ function superwebshare_register_settings_fallback() {
 		'superwebshare_fallback_text_color',                                    // ID.
 		__( 'Fallback text color', 'super-web-share' ),                         // Title.
 		'superwebshare_fallback_text_color_cb',                                 // CB.
+		'superwebshare_fallback_settings_section',                              // Page slug.
+		'superwebshare_fallback_settings_section'                               // Settings Section ID.
+	);
+
+	// Fall-back social media icons.
+	add_settings_field(
+		'fallback_social_networks',                               // ID.
+		__( 'Choose Social Platforms', 'super-web-share' ),                     // Title.
+		'superwebshare_fallback_social_networks_cb',                            // CB.
 		'superwebshare_fallback_settings_section',                              // Page slug.
 		'superwebshare_fallback_settings_section'                               // Settings Section ID.
 	);

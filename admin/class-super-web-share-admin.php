@@ -135,7 +135,7 @@ class Super_Web_Share_Admin extends Super_Web_Share {
      * If this is an autosave, SuperWebShare settings won't be saved.
 		 * Condition: when post value not exists
          */
-        if ( empty($_POST) || empty(  $_POST['post_type'] )  || ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) || (isset($_POST[ 'action' ]) && $_POST[ 'action'] == "inline-save" )   ) {
+        if ( empty($_POST) || empty(  $_POST['post_type'] )  || ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) || (isset($_POST[ 'action' ]) && $_POST[ 'action'] == "inline-save" )   ) {  // phpcs:ignore WordPress.Security.NonceVerification.Missing
             return $post_id;
         }
 

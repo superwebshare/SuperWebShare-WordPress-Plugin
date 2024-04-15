@@ -3,8 +3,8 @@ jQuery(document).ready(function ($) {
 });
 
 function SuperWebShareRighTLeft() {
-  var x = document.getElementById("superwebshare_settings[floating_position]").value;
-  document.getElementById("rightleft").innerHTML = " " + x;
+  const floatingPosition = document.getElementById("superwebshare_settings[floating_position]");
+  document.getElementById("rightleft").innerHTML = " " + (floatingPosition && floatingPosition.value);
 }
 
 jQuery(document).ready(function ($) {
@@ -90,6 +90,9 @@ jQuery(document).ready(function ($) {
   });
 
   function generateNetworkSortList() {
+    if (!sortingContainer) {
+      return false;
+    }
     sortingContainer.innerHTML = "";
     let topIndex = 0;
     networksObj.forEach((network) => {
@@ -290,7 +293,8 @@ jQuery(document).ready(function ($) {
   const $socialNetworksChoose = $(".sws-social-networks-wrap");
   const $networkChooseToggle = $(".social-networks-choose-toggle");
   const netWorkText = $networkChooseToggle.html();
-  $networkChooseToggle.click(function () {
+  $networkChooseToggle.click(function (e) {
+    e.preventDefault();
     $socialNetworksChoose.slideToggle(function () {
       $networkChooseToggle.html(
         $socialNetworksChoose.is(":hidden") ? netWorkText : $networkChooseToggle.attr("data-close-text")
