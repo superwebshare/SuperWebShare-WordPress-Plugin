@@ -212,7 +212,7 @@
   line-height: initial;
 }
 .sws-modal-bg .modal-container {
-  max-width: 420px;
+  max-width: 452px;
   min-width: 200px;
   width: 100%;
   outline: 0 none;
@@ -227,6 +227,7 @@
   animation: animateTop .5s;
   transition: all .5s;
   margin: 15px;
+  box-sizing: border-box;
 }
 
 .sws-links {
@@ -238,7 +239,9 @@
 }
 .sws-layout-1 .sws-links {
   margin-bottom: 24px;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  row-gap: 20px;
 }
 .sws-links a {
   font-size: 14px;
@@ -253,6 +256,7 @@
 .sws-layout-1 .sws-links a p{
   line-height: 16px;
   margin-bottom: 0;
+  margin-top: 0;
 }
 .sws-layout-1 .sws-links a{
   opacity: 0.7;
@@ -329,7 +333,7 @@
 .sws-modal-bg .modal-title {
   font-size: 24px;
   font-weight: bold;
-  margin-bottom: 15px;
+  margin-bottom: 24px;
 }
 .sws-modal-bg .sws-modal-close {
   position: absolute;

@@ -57,17 +57,25 @@ function hasPermission() {
     }
     console.log("SuperWebShare: Your browser does not seems to support SuperWebShare, as the browser is incompatible");
   }
+
+  if (typeof navigator.share === "undefined" || !navigator.share) {
+    let f = document.querySelectorAll(".sws-hide-if-no-share");
+    if (f.length > 0) {
+      f.forEach((m) => (m.style.display = "none"));
+    }
+  }
 }
 
-async function SuperWebSharefn(title, url, description) {
+async function SuperWebSharefn(title, url, description, fallback = "yes") {
+  fallback = fallback || "yes";
+  window.superWebShareData = { title, url, description };
   if (typeof navigator.share === "undefined" || !navigator.share) {
-    window.superWebShareData = { title, url, description };
-    swsModal();
+    fallback == "yes" && swsModal();
   } else if (window.location.protocol != "https:") {
     console.log(
       "SuperWebShare: Seems like the website is not served fully via https://. As for supporting SuperWebShare the website should be served fully via https://"
     );
-    swsModal();
+    fallback == "yes" && swsModal();
   } else {
     try {
       await navigator.share({ title, text: description, url });
@@ -111,9 +119,9 @@ document.addEventListener("click", function (SuperWebShare) {
 
   if (button) {
     let { meta_desc, meta_title, meta_url } = getPageMeta();
-    let { shareTitle, shareLink, shareDescription } = button.dataset;
+    let { shareTitle, shareLink, shareDescription, fallback } = button.dataset;
 
-    SuperWebSharefn(shareTitle || meta_title, shareLink || meta_url, shareDescription || meta_desc);
+    SuperWebSharefn(shareTitle || meta_title, shareLink || meta_url, shareDescription || meta_desc, fallback);
   } else if (target.classList.contains("sws-modal-bg")) {
     swsModal("hide");
   }
@@ -127,7 +135,8 @@ DOMReady(function () {
     copyButton.addEventListener("click", function (e) {
       e.preventDefault();
       let { meta_url } = getPageMeta();
-      navigator.clipboard.writeText(meta_url);
+      const shareUrl = window.superWebShareData.url || meta_url;
+      navigator.clipboard.writeText(shareUrl);
 
       child.innerText = child.dataset.copiedText;
       setTimeout(function () {

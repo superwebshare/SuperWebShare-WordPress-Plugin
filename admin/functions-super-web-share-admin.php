@@ -647,7 +647,7 @@ function superwebshare_register_settings_fallback() {
 
 	add_settings_field(
 		'fallback_twitter_via',                                                 // ID.
-		__( 'X.com (Twitter) username', 'super-web-share' ),                    // Title.
+		__( 'X (Twitter) username', 'super-web-share' ),                    // Title.
 		'fallback_twitter_via_cb',                                              // CB.
 		'superwebshare_fallback_settings_section',                              // Page slug.
 		'superwebshare_fallback_settings_section'                               // Settings Section ID.
@@ -974,7 +974,7 @@ function sws_get_social_networks() {
 			'color' => '#3a579a',
 		),
 		'twitter'   => array(
-			'name'  => __( 'Twitter', 'super-web-share' ),
+			'name'  => __( 'X', 'super-web-share' ),
 			'icon'  => 'icon-twitter',
 			'link'  => 'http://twitter.com/share?text={title}&url={url}',
 			'color' => '#000',

@@ -244,7 +244,7 @@ function superwebshare_fallback_modal( $args, $_echo = true ) {
 									<?php
 										echo $icon_class->get_icon( 'icon-copy' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 									?>
-									<span data-copied-text="<?php echo esc_attr__( 'Link Copied ✔', 'super-web-share' ); ?>">
+									<span data-copied-text="<?php echo esc_attr__( 'Link Copied', 'super-web-share' ); ?>  ✔">
 										<?php echo esc_html_e( 'Copy Link', 'super-web-share' ); ?>
 									</span>
 								</a>
@@ -562,12 +562,12 @@ function can_display_button_page_wise( $type = 'floating' ) {
 	$post = get_post();
 
 	if ( ! empty( $post ) ) {
-		if ( ( isset( $post->{"_superwebshare_post_{$type}_active"} ) && empty( $post->{"_superwebshare_post_{$type}_active"} ) ) ||
-			( ! empty( $post->{"_superwebshare_post_{$type}_active"} ) && 'enable' === $post->{"_superwebshare_post_{$type}_active"} )
-			) {
-				return false;
-		} else {
+		if (  empty( $post->{"_superwebshare_post_{$type}_active"} ) ||
+			( isset( $post->{"_superwebshare_post_{$type}_active"} ) && 'enable' === $post->{"_superwebshare_post_{$type}_active"} )
+		) {
 			return true;
+		} else {
+			return false;
 		}
 	} else {
 		return false;
@@ -590,21 +590,10 @@ if ( ! function_exists( 'super_web_share_shortcode' ) ) {
 	 */
 	function super_web_share_shortcode( $attr ) {
 
-		if ( is_archive() ) {
-			return;
-		}
-
 		$container_class = 'sws_supernormalaction';
 		$floating_class  = '';
 		$parent_style    = '';
 		wp_enqueue_style( 'super-web-share' );
-
-		if ( ! superwebshare_is_amp() ) {
-
-			wp_enqueue_script( 'super-web-share' );
-			add_action( 'wp_footer', 'super_web_share_fallback_modal_for_shortcode' );
-
-		}
 
 		$attr = shortcode_atts(
 			array(
@@ -617,8 +606,8 @@ if ( ! function_exists( 'super_web_share_shortcode' ) ) {
 				'align'                => 'start',
 				'fallback'             => 'yes',       // yes, no.
 				'floating-position'    => 'right',     // right, left.
-				'floating-from-side'   => '5px',       // Pix value.
-				'floating-from-bottom' => '5px',       // Pix value.
+				'floating-from-side'   => '24px',       // Pix value.
+				'floating-from-bottom' => '12px',       // Pix value.
 				'title'                => null,
 				'link'                 => null,
 				'description'          => null,
@@ -633,7 +622,17 @@ if ( ! function_exists( 'super_web_share_shortcode' ) ) {
 			$container_class = 'sws_superaction';
 			$parent_style    = $pos . ': 24px;';
 		}
-		$parent_style = 'text-align:' . $attr['align'] . ';';
+
+		if ( ! superwebshare_is_amp() && 'yes' === $attr['fallback'] ) {
+
+			wp_enqueue_script( 'super-web-share' );
+			add_action( 'wp_footer', 'super_web_share_fallback_modal_for_shortcode' );
+
+		} else {
+			$container_class .= ' sws-hide-if-no-share';
+		}
+
+		$parent_style = 'text-align:' . $attr['align'] . ';' . esc_attr( $pos ) . ':' . esc_html( $attr['floating-from-side'] ) . ';bottom:' . esc_html( $attr['floating-from-bottom'] );
 
 		$icon_class      = new Super_Web_Share_Icons();
 		$icon            = $icon_class->get_icon( $attr['icon'] );
@@ -651,13 +650,14 @@ if ( ! function_exists( 'super_web_share_shortcode' ) ) {
 		);
 
 		$button_attrs = array(
+			'data-fallback'          => $attr['fallback'],
 			'data-share-title'       => $attr['title'],
 			'data-share-link'        => $attr['link'],
 			'data-share-description' => $attr['description'],
 			'type'                   => 'button',
 			'on'                     => 'tap:superwebshare-lightbox',
 			'class'                  => implode( ' ', $button_classes ),
-			'style'                  => 'background-color:' . $attr['color'] . ';' . esc_attr( $pos ) . ':' . esc_html( $attr['floating-from-side'] ) . ';bottom:' . esc_html( $attr['floating-from-bottom'] ),
+			'style'                  => 'background-color:' . $attr['color'] . ';',
 		);
 
 		ob_start();
@@ -669,7 +669,7 @@ if ( ! function_exists( 'super_web_share_shortcode' ) ) {
 					<amp-social-share type="system" width="48" height="48" style="background-color:<?php echo esc_html( $attr['color'] ); ?>" class="superwebshare_amp_native_button superwebshare_amp_native_button_floating"></amp-social-share>
 				<?php
 			} else {
-				if ( superwebshare_is_amp() && 'yes' === $attr['fallback'] ) {
+				if ( superwebshare_is_amp() || 'yes' === $attr['fallback'] ) {
 					superwebshare_amp_modal( true );
 				}
 				?>
