@@ -642,12 +642,12 @@ function superwebshare_register_settings_fallback() {
 	/**
 	 * Since 2.3 for twitter via url parameter.
 	 *
-	 * @see https://developer.twitter.com/en/docs/twitter-for-websites/tweet-button/guides/parameter-reference1
+	 * @see https://developer.x.com/en/docs/twitter-for-websites/tweet-button/guides/parameter-reference1
 	 */
 
 	add_settings_field(
 		'fallback_twitter_via',                                                 // ID.
-		__( 'X (Twitter) username', 'super-web-share' ),                    // Title.
+		__( 'X (Twitter) username', 'super-web-share' ),                    	// Title.
 		'fallback_twitter_via_cb',                                              // CB.
 		'superwebshare_fallback_settings_section',                              // Page slug.
 		'superwebshare_fallback_settings_section'                               // Settings Section ID.
@@ -976,7 +976,7 @@ function sws_get_social_networks() {
 		'twitter'   => array(
 			'name'  => __( 'X', 'super-web-share' ),
 			'icon'  => 'icon-twitter',
-			'link'  => 'http://twitter.com/share?text={title}&url={url}',
+			'link'  => 'http://x.com/share?text={title}&url={url}',
 			'color' => '#000',
 		),
 		'whatsapp'  => array(

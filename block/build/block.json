@@ -3,10 +3,10 @@
   "apiVersion": 3,
   "name": "create-block/super-web-share-block",
   "version": "0.1.0",
-  "title": "Super Web Share Block",
+  "title": "Super Web Share button",
   "category": "widgets",
   "icon": "share",
-  "description": "Super Web share block editor",
+  "description": "Create a social sharing button easily. Display a share icon to share the current page using native share on social media.",
   "example": {},
   "supports": {
     "html": true

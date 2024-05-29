@@ -325,7 +325,7 @@ function superwebshare_fallback_show_fallback_cb() {
 	superwebshare_input_toggle( 'superwebshare_fallback_settings[superwebshare_fallback_show_fallback_on_desktop]', 'enable', $saved );
 	?>
 		<p class="description">
-			<?php esc_html_e( 'This setting does not apply to Microsoft Edge Browser, as the specific browser is now showing a dialog box somewhat similar to our fallback', 'super-web-share' ); ?>
+			<?php esc_html_e( 'Microsoft Edge desktop browser is now supporting Web Share API, and they show custom share buttons. However, you can toggle off this setting if you don’t want to show the fallback share button provided by Super Web Share on desktop browsers that don’t support API.', 'super-web-share' ); ?>
 		</p>
 	<?php
 }
@@ -659,7 +659,7 @@ function superwebshare_admin_interface_render() {
 			<p>Connect with us on our social media. You can also share your suggestions and feedback with us to improve our small plugin:</p>
 				<ul style="list-style-type: disc;margin-left:16px">
 					<li><a href="https://www.facebook.com/SuperWebShare/" target="_blank">Facebook</a></li>
-					<li><a href="https://twitter.com/superwebshare" target="_blank">X (Twitter)</a></li>
+					<li><a href="https://x.com/superwebshare" target="_blank">X (Twitter)</a></li>
 					<li><a href="https://www.instagram.com/superwebshare/" target="_blank">Instagram</a></li>
 					<li>Our email: <b>support@superwebshare.com</b></li>
 				</ul>

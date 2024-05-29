@@ -1,6 +1,6 @@
 <?php
 
-class SWS_Elementer_widget extends \Elementor\Widget_Base {
+class SWS_Elementor_widget extends \Elementor\Widget_Base {
 
 	public function get_name() {
         return 'super_web_share';

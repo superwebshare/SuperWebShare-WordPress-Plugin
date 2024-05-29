@@ -1,6 +1,6 @@
 # Super Web Share
 <p>
-    <a href="https://twitter.com/intent/follow?screen_name=superwebshare">
+    <a href="https://x.com/intent/follow?screen_name=superwebshare">
 		<img src="https://img.shields.io/twitter/follow/superwebshare.svg?style=social&logo=twitter" alt="follow SuperWebShare on Twitter">
 	</a>
 	<a href="https://github.com/superwebshare/SuperWebShare-WordPress-Plugin">
@@ -83,7 +83,7 @@ There are various ways you can contribute:
 * [Raise an issue](https://github.com/superwebshare/super-web-share/issues) on GitHub.
 * Follow and Engage with us on Social Media
 
- &nbsp;&nbsp;&nbsp; <a href="https://twitter.com/intent/follow?screen_name=superwebshare" target="_blank" style="width:100%">Twitter</a>&nbsp;&nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp; <a href="https://x.com/intent/follow?screen_name=superwebshare" target="_blank" style="width:100%">Twitter</a>&nbsp;&nbsp;&nbsp;&nbsp;
 <a href="https://www.youtube.com/channel/UCFKvXcUyijXIh8JeyZUX56w" target="_blank" style="width:100%">YouTube</a>&nbsp;&nbsp;&nbsp;&nbsp;
 <a href="https://www.facebook.com/SuperWebShare/" target="_blank" style="width:100%">Facebook</a>&nbsp;&nbsp;&nbsp;&nbsp;
 <a href="https://www.instagram.com/superwebshare/" target="_blank" style="width:100%">Instagram</a>&nbsp;&nbsp;&nbsp;&nbsp;

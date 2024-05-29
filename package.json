@@ -1,7 +1,7 @@
 {
   "name": "super-web-share",
   "version": "1.0.0",
-  "description": "<p>     <a href=\"https://twitter.com/intent/follow?screen_name=superwebshare\"> \t\t<img src=\"https://img.shields.io/twitter/follow/superwebshare.svg?style=social&logo=twitter\" alt=\"follow SuperWebShare on Twitter\"> \t</a> \t<a href=\"https://github.com/superwebshare/SuperWebShare-WordPress-Plugin\"> \t\t<img src=\"https://img.shields.io/github/stars/superwebshare/SuperWebShare-WordPress-Plugin.svg?style=social&logo=github&label=SuperWebShare\" alt=\"Star Super Web Share\"> \t</a>",
+  "description": "<p>     <a href=\"https://x.com/intent/follow?screen_name=superwebshare\"> \t\t<img src=\"https://img.shields.io/twitter/follow/superwebshare.svg?style=social&logo=twitter\" alt=\"follow SuperWebShare on Twitter\"> \t</a> \t<a href=\"https://github.com/superwebshare/SuperWebShare-WordPress-Plugin\"> \t\t<img src=\"https://img.shields.io/github/stars/superwebshare/SuperWebShare-WordPress-Plugin.svg?style=social&logo=github&label=SuperWebShare\" alt=\"Star Super Web Share\"> \t</a>",
   "main": "",
   "scripts": {
     "admin-dev": "npx tailwindcss -i ./admin/css/super-web-share-admin.css -o ./admin/css/super-web-share-admin.min.css --watch"

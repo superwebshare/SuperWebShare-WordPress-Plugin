@@ -28,12 +28,12 @@ class SWS_Elementor{
   
         require_once __DIR__ . "/widget.php";
        
-        $widgets_manager->register( new \SWS_Elementer_widget() );
+        $widgets_manager->register( new \SWS_Elementor_widget() );
     }
 
     function enqueue_styles_for_widgets(){
 
-        wp_enqueue_style( "superwebshare-elementer-editor", plugin_dir_url( __FILE__ ) . '/editor.css', array(), SUPERWEBSHARE_VERSION , 'all' );
+        wp_enqueue_style( "superwebshare-elementor-editor", plugin_dir_url( __FILE__ ) . '/editor.css', array(), SUPERWEBSHARE_VERSION , 'all' );
     }
 
 }
