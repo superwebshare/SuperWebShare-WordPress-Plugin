@@ -1,18 +1,18 @@
-=== Super Web Share ===
+=== Super Web Share - Native Social Sharing Button ===
 Contributors: superwebshare
 Donate link: https://superwebshare.com/donate
-Tags: share button, web share, native share, Share API, share, social share
+Tags: share button, web share, share, Share API, social share
 Requires at least: 3.0.1
-Tested up to: 6.4
+Tested up to: 6.5.3
 Stable tag: 2.5
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Super Web Share helps to easily add native share prompt to your website for easy page/post sharing in less than a minute.
+Super Web Share helps to easily add native share prompt to your website for easily sharing page/post in less than a minute.
 
 == Description ==
-**Super Web Share is a WordPress-based native share plugin that helps users easily share the page/post with others by prompting the native share action.**
+Super Web Share is a WordPress-based native share plugin that helps users easily share the page/post with others by prompting the native share action.
 
 We developed from the ground up with simplicity and performance in mind to increase your shares. As SuperWebShare only shows the apps installed within the device upon the share prompt, the rate of sharing of post/page will be higher than showing all the social icons in a page. Due to this key reason, website developers can skip the usage of other social media icons upon their website and can make the share more prominent.
 
@@ -78,7 +78,7 @@ The Web Share plugin works on browsers like Chrome for Android, iOS Safari (from
 
 = How do I report bugs and new feature suggestions? =
 
-You can report the bugs and request new features you need to see at our [GitHub repository Discussion page](https://github.com/superwebshare/super-web-share/discussions/2) 
+You can report the bugs and request new features you need to see at our [GitHub repository Discussion page](https://superwebshare.com/ghdcs) 
 
 = How can I contribute to this awesome plugin? =
 
@@ -94,7 +94,7 @@ Yes, SuperWebShare is fully GDPR Compliant. Unlike other social sharing tools, t
 
 = Shortcode support available? =
 
-Yes, from v2.3 we do support shortcodes to add floating and inline button like as on your mind. You can read more about how to [add shortcodes](https://superwebshare.com/docs/shortcodes/).
+Yes, from v2.3 we do support shortcodes to add floating and inline button like as on your mind. You can read more about how to [add shortcodes](https://superwebshare.com/shcd).
 
 == Screenshots ==
 
