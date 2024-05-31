@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/superwebshare/superwebshareprivate.git"
+    "url": "git+https://github.com/superwebshare/super-web-share.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/superwebshare/superwebshareprivate/issues"
+    "url": "https://github.com/superwebshare/super-web-share/issues"
   },
-  "homepage": "https://github.com/superwebshare/superwebshareprivate#readme",
+  "homepage": "https://github.com/superwebshare/super-web-share#readme",
   "dependencies": {
     "tailwindcss": "^3.4.1"
   }
