@@ -60,13 +60,13 @@ class Super_Web_Share_Public {
 
 					$style_path = plugin_dir_path( __FILE__ ) . 'css/super-web-share-public.min.css';
 					if ( file_exists( $style_path ) ) {
-						echo wp_remote_get( $style_path ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+						echo file_get_contents( $style_path ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
 					}
 
 					$amp_style_path = plugin_dir_path( __FILE__ ) . 'css/super-web-share-amp-public.min.css';
 					if ( file_exists( $amp_style_path ) ) {
-						echo wp_remote_get( $amp_style_path ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+						echo file_get_contents( $amp_style_path ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 						echo ".superwebshare_prompt::before { 
 						background-image: url('" . esc_html( trim( plugin_dir_url( __FILE__ ), '/' ) ) . "/assets/android_share.svg');
 					}";
