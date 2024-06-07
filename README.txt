@@ -4,23 +4,29 @@ Donate link: https://superwebshare.com/donate
 Tags: share button, web share, share, Share API, social share
 Requires at least: 3.0.1
 Tested up to: 6.5.3
-Stable tag: 2.5
+Stable tag: 2.5.1
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Super Web Share helps to easily add native share prompt to your website for easily sharing page/post in less than a minute.
+Super Web Share helps you easily add a native share prompt to your website, allowing you to share a page or post in less than a minute.
 
 == Description ==
-Super Web Share is a WordPress-based native share plugin that helps users easily share the page/post with others by prompting the native share action.
+Super Web Share is a WordPress-based native share plugin that prompts the native share action and helps users easily share a page or post with others.
 
-We developed from the ground up with simplicity and performance in mind to increase your shares. As SuperWebShare only shows the apps installed within the device upon the share prompt, the rate of sharing of post/page will be higher than showing all the social icons in a page. Due to this key reason, website developers can skip the usage of other social media icons upon their website and can make the share more prominent.
+We developed from the ground up with simplicity and performance in mind to increase your shares. As SuperWebShare only shows the apps installed within the device upon the share prompt, the rate of sharing of posts/pages will be higher than showing all the social icons on a page. Due to this key reason, website developers can skip the usage of other social media icons on their website and can make the share more prominent.
 
-The Super Web Share plugin for WordPress helps increase your traffic and engagement by a single quick click to share the website with your friends and social media. Super Web Share works on all supported browsers like Chrome for Android, Edge for Android, Brave for Android, and Opera for Android. It will show the native apps installed upon the device once you share the article with others; due to that, users can easily share the page/post with others super easily in just a click. Upon the native share, which prompts up like a native iOS or Android sharesheet, you users can easily copy the website page link if the users wants that option.
+The Super Web Share plugin for WordPress helps increase your traffic and engagement with a single quick click to share the website with your friends and social media. Super Web Share works on all supported browsers like Chrome for Android, Edge for Android, Brave for Android, and Opera for Android. It will show the native apps installed on the device once you share the article with others; due to that, users can easily share the page/post with others super easily in just a click. Upon the native share, which prompts up like a native iOS or Android share sheet, users can easily copy the website page link if they want that option.
 
 It takes less than a minute to set up Super Web Share, and we provide a clean uninstall by removing the entire data entry it creates. We also won't save any settings to your database until you manually save the settings. We also provide a fallback native popup if the Native Web Share is not supported within the browser.
 
-Currently, the Super Web Share plugin provides a share button before and after the post/page content and a floating share button where you can set the color, the text of the share buttons, the position of the floating button, and can also set the pages or posts which you would like to show the share buttons via our Settings page, to easily add the share feature to your websites. As an addon, we are fully compatible with the AMP plugin, which means you can add the native share to your AMP pages provided by the AMP plugin.
+Currently, the Super Web Share plugin provides a share button before and after the post/page content and a floating share button where you can set the color, the text of the share buttons, and the position of the floating button; it can also set the pages or posts which you would like to show the share buttons via our Settings page, to easily add the share feature to your websites. As a plugin that focuses on simplicity, we are fully compatible with the AMP plugin, which means you can add the native share to your AMP pages provided by the AMP plugin.
+
+### Social Platforms supported
+**1) On supported devices:** 
+You will notice the share prompt (also called sharesheet) where you can share the page via all applications installed on your device that accept the sharing (mobile - Android and iOS, tab, desktop - for Microsoft Edge browser). This means all the social platforms on your website visitor's devices can be selected and supported.
+**2) If the device or browser won't support the native share:**
+If the website is viewed from a browser or device that won't support native sharing, our fallback modal works. Within the fallback modal, you can select the social platforms you want to show for your website via our settings page (SuperWebShare > Fallback). The social platforms that are interested can be selected. Right now, we are providing social media like Facebook, X (Twitter), LinkedIn, Pinterest, Mastodon, Telegram, Pinterest, and Email. We're expanding with more social platforms.
 
 ### Advantages of using Super Web Share
 * Fast and lightweight social sharing plugin for your WordPress that won't slow down your site
@@ -34,16 +40,16 @@ Currently, the Super Web Share plugin provides a share button before and after t
 #### Want to test to know how SuperWebShare works on a website? 
 * Open [SuperWebShare.com](https://superwebshare.com/?utm_source=wordpress-plugin&utm_medium=wordpress-readme) in a supported device. See [FAQ to know the supported browsers](https://wordpress.org/plugins/super-web-share/#faq)
 * You can see a floating button at the bottom right corner
-* Tap on it, instantly you can see the native Web Share prompt with the applications, which you can share the page.
-* Tap on the icon of application from the prompt, and send.
-* If the website is not supporting Native share option, you will notice the fallback popup which we created to make as a all in one intuitive Share plugin for your website with copy link option.
+* Tap on it; instantly, you can see the native Web Share prompt with the applications, which you can share on the page.
+* Tap on the icon of the application from the prompt and send.
+* If the website does not support the Native Share option, you will notice the fallback popup where you can add the social media platforms via our Fallback settings, which we created to make an intuitive share plugin with a copy link option for your website.
 
 #### Requirments for working SuperWebShare?
-* The Website should be served fully via a secured origin, i.e., the green padlock should be there on the address for working Super Web Share. 
-* Else by default, our fallback popup will show on those browsers where users can share via the major social sharing platforms like WhatsApp, Facebook, LinkedIn and Twitter and also comes with the Copy link option (on https sites).
+* The Website should be fully served via a secured origin, i.e., the green padlock should be on the address for a working Super Web Share. 
+* Otherwise, by default, our fallback popup will show on browsers where users can share via major social sharing platforms like WhatsApp, Facebook, LinkedIn, and Twitter. It also comes with the Copy link option (on https sites).
 
 #### How to contribute? 
-**You can easily contribute to the plugin by translating to your language**. Click on the link below, choose your language and start translating the strings in Development (trunk).
+**You can easily contribute to the plugin by translating it into your language**. Click on the link below, choose your language, and translate the strings into Development (trunk).
 
 * **[Translate plugin to your language](https://translate.wordpress.org/projects/wp-plugins/super-web-share/)**
 * Do you know coding? Then you can also contribute to this plugin via our [GitHub repository](https://github.com/superwebshare/super-web-share/) to make this the best one.
@@ -57,24 +63,24 @@ Currently, the Super Web Share plugin provides a share button before and after t
 Install manually:
 1. Upload `super-web-share.zip` zip file to the `/wp-content/plugins/` directory
 2. Go to WordPress admin > Plugins
-2. Activate Super Web Share plugin from the Plugins list
+2. Activate the Super Web Share plugin from the Plugins list
 
 == Customize Super Web Share ==
-You can easily customize the color, position, and pages you would like to show the button before and after the page or post content and the floating share button and the fallback color via our plugin. To customize go to Super Web Share from the admin dashboard.
+You can easily customize the color, position, and pages on which you would like to show the button before and after the page or post content, the floating share button, and the fallback color via our plugin. To customize, go to Super Web Share from the WordPress admin dashboard.
 
 == Frequently Asked Questions ==
 
-= Which all browsers do the Super Web Share plugin works? =
+= Which browsers do the Super Web Share plugin work? =
 
-The Web Share plugin works on browsers like Chrome for Android, iOS Safari (from version 12.2), Samsung Internet for Android (version 9.2+), Edge for Android, Brave for Android, Opera for Android, Google Chrome 89 or later on Chrome OS and Windows and Safari 12 or later on macOS and iOS. Else our fallback prompt to output the share icons.
+The Web Share plugin works on browsers like Chrome for Android, iOS Safari (from version 12.2), Samsung Internet for Android (version 9.2+), Edge for Android, Brave for Android, Opera for Android, Google Chrome 89 or later on Chrome OS and Windows, and Safari 12 or later on macOS and iOS. Otherwise, our fallback prompt will output the share icons, from which you can select the social platforms from our Fallback settings page.
 
-= Will the floating share button and Inline content button on page and post will show upon non-supported browsers? =
+= Will the floating share button and Inline content button on the page and post appear on non-supported browsers? =
 
-No, the floating share button and Inline content share button on pages and posts will be hidden automatically if the browser won't support Web Share API. If you have enabled the fallback within our settings, we show the fallback prompt with social share icons and copy link option.
+By default, yes! If the browser doesn't support Web Share API, we show the floating share button and inline content share button on pages and posts. If you have disabled the fallback within our settings, we won't show the fallback prompt with social share icons and a copy link option.
 
 = Do you support WooCommerce product pages? =
 
-The Web Share plugin works on browsers like Chrome for Android, iOS Safari (from version 12.2), Samsung Internet for Android (version 9.2+), Edge for Android, Brave for Android, Opera for Android, Google Chrome 89 or later on Chrome OS and Windows and Safari 12 or later on macOS and iOS. Else our fallback prompt to output the share icons.
+Yes, we do support WooCommerce Product pages. You can select 'Product' within the Floating and Inline settings page, and then the social share button will appear for your WooCommerce product pages. You can also disable or enable the share button by editing the single product pages based on your interest. The one-click social share button for your WooCommerce is ready!
 
 = How do I report bugs and new feature suggestions? =
 
@@ -84,17 +90,17 @@ You can report the bugs and request new features you need to see at our [GitHub 
 
 You can contribute to this Web Share plugin via our [GitHub repository](https://github.com/superwebshare/super-web-share/) 
 
-= Did I need to register or signup anywhere to use Super Web Share plugin? =
+= Did I need to register or sign up anywhere to use the Super Web Share plugin? =
 
-No, super web share is super easy to set up for anyone to create a native social sharing experience on their websites, without any registrations. If the browser supports the Share API, it will magically prompt the native shareing on the supported browsers. 
+No, super web share is super easy to set up for anyone to create a native social sharing experience on their websites without any registrations. If the browser supports the Share API, it will magically prompt native sharing on the supported browsers. 
 
 = Is SuperWebShare plugin GDPR Compliant? =
 
-Yes, SuperWebShare is fully GDPR Compliant. Unlike other social sharing tools, this share plugin does not use any cookies, tracking scripts, or store any user data.
+Yes, SuperWebShare is fully GDPR Compliant. Unlike other social sharing tools, this share plugin does not use any cookies or tracking scripts or store any user data.
 
-= Shortcode support available? =
+= Is Shortcode support available? =
 
-Yes, from v2.3 we do support shortcodes to add floating and inline button like as on your mind. You can read more about how to [add shortcodes](https://superwebshare.com/shcd).
+Yes, from v2.3, we do support shortcodes to add floating and inline buttons like as on your mind. You can read more about how to [add shortcodes](https://superwebshare.com/shcd).
 
 == Screenshots ==
 
@@ -103,9 +109,15 @@ Yes, from v2.3 we do support shortcodes to add floating and inline button like a
 3. Inline sharing button settings page of Super Web Share
 4. Fallback settings page
 5. Appearance page settings
-6. Fallback on the desktop with social media platforms like WhatsApp, Twitter, Facebook and LinkedIn.
+6. Fallback on the desktop with social media platforms like WhatsApp, Twitter, Facebook, and LinkedIn.
 
 == Changelog ==
+
+= 2.5.1 =
+Release Date: June 8th, 2024
+
+Bugfix:
+* Fixed an error where the AMP legacy version is selected
 
 = 2.5 =
 Release Date: May 31st, 2024
