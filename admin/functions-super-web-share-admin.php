@@ -287,10 +287,10 @@ add_filter( 'update_footer', 'superwebshare_footer_version', 11 );
  *
  * Will redirect to SuperWebShare settings page when plugin is activated.
  * Will not redirect if multiple plugins are activated at the same time.
- * Will not redirect when activated network wide on multisite. Network admins know their way.
+ * Will not redirect when activated network-wide on multisite. Network admins know their way.
  *
  * @param  mixed $plugin plugin object.
- * @param  mixed $network_wide the flag for network wide.
+ * @param  mixed $network_wide the flag for network-wide.
  * @return void|boolean
  *
  * @since 1.3
@@ -305,16 +305,20 @@ function superwebshare_activation_redirect( $plugin, $network_wide ) {
 	 *
 	 * @link https://core.trac.wordpress.org/browser/tags/4.9.8/src/wp-admin/plugins.php#L15
 	 */
-	$wp_list_table_instance = new WP_Plugins_List_Table();
-	$current_action         = $wp_list_table_instance->current_action();
-	// When only one plugin is activated, the current_action() method will return activate.
-	if ( 'activate' !== $current_action ) {
-		return false;
-	}
-	// Redirect to Super Web Share settings page.
-	$url = admin_url( 'admin.php?page=superwebshare' );
-	wp_safe_redirect( $url );
-	exit();
+	 if( class_exists( "WP_Plugins_List_Table" ) ){
+
+		$wp_list_table_instance = new WP_Plugins_List_Table();
+		$current_action         = $wp_list_table_instance->current_action();
+		// When only one plugin is activated, the current_action() method will return activate.
+		if ( 'activate' !== $current_action ) {
+			return false;
+		}
+		// Redirect to Super Web Share settings page.
+		$url = admin_url( 'admin.php?page=superwebshare' );
+		wp_safe_redirect( $url );
+		exit();
+
+	 }
 }
 add_action( 'activated_plugin', 'superwebshare_activation_redirect', PHP_INT_MAX, 2 );
 
