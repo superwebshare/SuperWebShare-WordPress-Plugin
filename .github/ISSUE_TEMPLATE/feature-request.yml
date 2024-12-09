@@ -1,0 +1,31 @@
+name: ✨ Feature request
+description: If you have suggestions for improving existing functionality or require something for development (such as a new hook), please let us know or consider submitting a Pull Request!
+title: "[Feature request]: "
+labels: ["type: feature-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### Thanks for contributing!
+
+        Before opening a new issue, please search for duplicate issues to prevent opening a duplicate feature request. If there is already an open existing request, please leave a comment there.
+        Feel free to contribute to any existing issues.
+        Search tip: You can filter our issues using [our enhancement label](https://github.com/woocommerce/woocommerce/issues?q=is%3Aissue+label%3A%22type%3A+enhancement%22+).
+        Search tip: Make use of [GitHub's search syntax to refine your search](https://help.github.com/en/github/searching-for-information-on-github/searching-issues-and-pull-requests).
+  - type: textarea
+    id: summary
+    attributes:
+        label:  Is your feature request related to a problem? Please describe.
+        description: A clear and concise description of what you want to see within the plugin
+    validations:
+      required: true
+  - type: textarea
+    id: alternative
+    attributes:
+      label: Describe the solution you'd like
+      description: A clear and concise description of the solution
+  - type: textarea
+    id: context
+    attributes:
+      label: Why do you think this feature is something we should consider for the Super Web Share plugin?
+      description: It will help us to prioritize the issue.
