@@ -63,6 +63,11 @@ body:
     id: isolating_the_problem
     attributes:
       label: "Isolating the problem"
+      description: |
+        Please try testing your site for theme and plugin conflicts. 
+        To do that, deactivate all plugins except Super Web Share and switch to a default WordPress theme. Then, test it again. 
+        If the issue is resolved with the default theme and all plugins deactivated, it means that one of your plugins or a theme is causing the issue. 
+        You will then need to enable it one by one and test every time you do that to figure out which plugin is causing the issue.
       options:
         - label: "This bug happens only when the SuperWebShare plugin is active."
         - label: "This bug happens with a default WordPress theme ([Twenty Twenty Four theme](https://wordpress.org/themes/twentytwentyfour/))."
