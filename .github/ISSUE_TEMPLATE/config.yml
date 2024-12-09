@@ -1,8 +1,8 @@
 blank_issues_enabled: false
 contact_links:
-  - name: Super Web Share Support
+  - name: Support
     url: https://superwebshare.com/contact/
-    about: Customer experience for SuperWebShare users having questions or seeking general support.
-  - name: Super Web Share Documentation
+    about: Customer experience for SuperWebShare users who are having questions or seeking general support.
+  - name: Documentation
     url: https://superwebshare.com/docs/
     about: Information and documentation about Super Web Share.
