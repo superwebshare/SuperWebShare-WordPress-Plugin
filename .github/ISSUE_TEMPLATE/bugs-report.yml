@@ -1,6 +1,9 @@
 name: "Bug Report"
 description: "Report a bug if something isn't working as expected in SuperWebShare"
+title: "[Bug]: "
 labels: ["status/awaiting_triage"]
+assignees:
+  - josevarghese
 body:
   - type: markdown
     attributes:
@@ -42,6 +45,22 @@ body:
       label: "Steps to reproduce"
       description: "List all the steps needed to reproduce the issue so we can replicate it ourselves."
       placeholder: "1) .... 2) ... 3) ..."
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: What browsers are you seeing the problem on?
+      multiple: true
+      options:
+        - Firefox
+        - Chrome
+        - Safari
+        - Microsoft Edge
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so there is no need for backticks.
+      render: shell
   - type: checkboxes
     id: isolating_the_problem
     attributes:
