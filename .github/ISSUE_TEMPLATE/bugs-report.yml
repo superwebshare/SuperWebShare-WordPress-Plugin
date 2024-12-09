@@ -9,17 +9,11 @@ body:
     attributes:
       value: |
         ## BEFORE POSTING YOUR ISSUE
-
         - Please create GitHub issues only for SuperWebShare bugs. GitHub issues ARE NOT FOR SUPPORT.
-
         - To avoid duplicates, please search this repository for the issue.
-
-        - Ensure you are using the most updated versions of SuperWebShare, WordPress & your theme.
-
-        Deactivate all of your plugins. If this solves the problem, gradually activate each plugin until you spot the problematic one.
-
+        - Ensure you use the most updated versions of SuperWebShare, WordPress & your theme.
+        - Deactivate all of your plugins. If this solves the problem, gradually activate each plugin until you spot the problematic one.
         - Change your WordPress theme to [default WordPress theme](https://wordpress.org/themes/twentytwentyfour/).
-
         ## THE ISSUE
   - type: checkboxes
     id: prerequisites
@@ -44,11 +38,15 @@ body:
     attributes:
       label: "Steps to reproduce"
       description: "List all the steps needed to reproduce the issue so we can replicate it ourselves."
-      placeholder: "1) .... 2) ... 3) ..."
+      placeholder: |
+        1. Go to
+        2. Click on
+        3. Scroll down to
+        4. See error
   - type: dropdown
     id: browsers
     attributes:
-      label: What browsers are you seeing the problem on?
+      label: Could you please specify which browsers you are experiencing the issue on
       multiple: true
       options:
         - Firefox
@@ -58,8 +56,8 @@ body:
   - type: textarea
     id: logs
     attributes:
-      label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so there is no need for backticks.
+      label: Any error logs?
+      description: If you notice any error within the log, kindly copy and paste it below. This will be automatically formatted into code, so there is no need for backticks.
       render: shell
   - type: checkboxes
     id: isolating_the_problem
