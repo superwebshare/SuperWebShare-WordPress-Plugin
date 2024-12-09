@@ -1,7 +1,7 @@
 name: ✨ Feature request
 description: If you have suggestions for improving existing functionality or require something for development (such as a new hook), please let us know or consider submitting a Pull Request!
 title: "[Feature request]: "
-labels: ["type: feature-request"]
+labels: ["feature-request"]
 body:
   - type: markdown
     attributes:
