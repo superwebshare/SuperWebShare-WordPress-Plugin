@@ -9,6 +9,7 @@ body:
         ### WooHoo!!! Thanks for contributing!
 
         Before opening a new issue, please search for duplicate issues to prevent opening a duplicate feature request. If there is already an open existing request, please leave a comment there.
+  - type: textarea
     id: summary
     attributes:
         label:  Is your feature request related to a problem? Please describe.
